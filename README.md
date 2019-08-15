@@ -4,16 +4,16 @@ languages:
 - csharp
 products:
 - azure
-services: Kubernetes-Cluster
-platforms: dotnet
-author: yaohaizh
+extensions:
+- services: Kubernetes-Cluster
+- platforms: dotnet
 ---
 
 # Getting started on managing Kubernetes clusters (AKS) using C# #
 
-          An Azure Container Services sample for managing a Kubernetes cluster.
-             - Create a Kubernetes cluster
-             - Update the number of agent virtual machines in an Azure Container Service
+ An Azure Container Services sample for managing a Kubernetes cluster.
+    - Create a Kubernetes cluster
+    - Update the number of agent virtual machines in an Azure Container Service
 
 
 ## Running this Sample ##
