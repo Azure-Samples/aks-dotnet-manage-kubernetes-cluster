@@ -7,6 +7,7 @@ using Microsoft.Azure.Management.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent;
 using Microsoft.Azure.Management.ResourceManager.Fluent.Core;
 using Microsoft.Azure.Management.Samples.Common;
+using Microsoft.Rest.Azure;
 using System;
 using System.IO;
 
@@ -91,6 +92,15 @@ namespace ManageKubernetesCluster
 
                 Utilities.Log("Updated Kubernetes cluster: " + kubernetesCluster.Id);
                 Utilities.Print(kubernetesCluster);
+            }
+            catch (CloudException e)
+            {
+                Utilities.Log("An error ocurred: " + e.Message);
+                Utilities.Log("Azure returned an error: " + e.Response?.Content);
+            }
+            catch (Exception e)
+            {
+                Utilities.Log("An error ocurred: " + e.Message);
             }
             finally
             {
