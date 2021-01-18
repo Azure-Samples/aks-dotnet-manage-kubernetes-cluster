@@ -5,8 +5,8 @@ languages:
 products:
 - azure
 extensions:
-- services: Kubernetes-Cluster
-- platforms: dotnet
+  services: Kubernetes-Cluster
+  platforms: dotnet
 ---
 
 # Getting started on managing Kubernetes clusters (AKS) using C# #
